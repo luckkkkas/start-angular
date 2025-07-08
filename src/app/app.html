@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="./app.css">
+<style>
+  .Navbar{
+    display: flex;
+  }
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+<main>
+  <nav class="Navbar">
+    <a href="/home">Home </a>
+    <a> | </a>
+    <a href="/about"> About</a>
+  </nav>
+</main>
+
+<app-about name="A prop veio do app" (emitindoValorName)="Logar($event)"/>
+<router-outlet />
